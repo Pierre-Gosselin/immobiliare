@@ -9,7 +9,7 @@ git clone ...
 npm install
 ```
 
-Pour travailler sur le front, ne pas oublier de compiler le fichier SASS :
+Pour travailler sur le front, ne pas oublier de compiler le fichier SCSS :
 
 ```
 npm run watch
