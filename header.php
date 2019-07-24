@@ -2,8 +2,10 @@
 <html <?php language_attributes(); ?>>
     <head>
         <meta charset="utf-8">
-        <title>Mon thème WordPress</title>
-        <link rel="stylesheet" href="<?php bloginfo('stylesheet_url'); ?>">
+        <title><?php wp_title('|'); ?></title>
+        <?php 
+        // Permet de charger tous les styles css de wordpress
+        wp_head(); ?>
     </head>
     <body>
         <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
