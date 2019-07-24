@@ -17,7 +17,8 @@
                         </div>
                         <?php the_image(); ?>
                         <div class="card-body">
-                            
+                            Surface : <?php echo get_post_meta($post->ID, 'surface',true); ?> m²<br>
+                            Prix : <?php echo get_post_meta($post->ID, 'prix',true); ?> €
                             <p><?php the_excerpt(); ?></p>
                         </div>    
 

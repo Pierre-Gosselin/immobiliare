@@ -20,6 +20,7 @@ add_action( 'init', 'register_my_menu' );
 // Register Custom Navigation Walker
 require_once get_template_directory() . '/class-wp-bootstrap-navwalker.php';
 
+// Images à la une
 add_theme_support( 'post-thumbnails' );
 
 function the_image()
@@ -31,20 +32,20 @@ function the_image()
 }
 
 
-function register_my_cpt() {
-    register_post_type('project', [
-        'label' => 'Projets',
+function register_housing() {
+    register_post_type('housing', [
+        'label' => 'Logements',
         'labels' => [
-            'name' => 'Projets',
-            'singular_name' => 'Projet',
-            'all_items' => 'Tous les projets',
-            'add_new_item' => 'Ajouter un projet',
-            'edit_item' => 'Éditer le projet',
-            'new_item' => 'Nouveau projet',
-            'view_item' => 'Voir le projet',
-            'search_items' => 'Rechercher parmi les projets',
-            'not_found' => 'Pas de projet trouvé',
-            'not_found_in_trash' => 'Pas de projet dans la corbeille'
+            'name' => 'Logements',
+            'singular_name' => 'Logement',
+            'all_items' => 'Tous les logements',
+            'add_new_item' => 'Ajouter un logement',
+            'edit_item' => 'Éditer le logement',
+            'new_item' => 'Nouveau logement',
+            'view_item' => 'Voir le logement',
+            'search_items' => 'Rechercher parmi les logements',
+            'not_found' => 'Pas de logement trouvé',
+            'not_found_in_trash' => 'Pas de logement dans la corbeille'
         ],
         'public' => true,
         'supports' => ['title', 'editor', 'author', 'thumbnail'],
@@ -53,4 +54,51 @@ function register_my_cpt() {
     ]);
 }
 
-add_action( 'init', 'register_my_cpt' );
+
+add_action( 'init', 'register_housing' );
+
+// Ajouter des villes
+function register_city(){
+    register_taxonomy('city', 'housing', [
+        'label' => 'Villes',
+        'labels' => [
+            'name' => 'Villes',
+            'singular_name' => 'Ville',
+            'all_items' => 'Tous les villes',
+            'edit_item' => 'Éditer le ville',
+            'view_item' => 'Voir le ville',
+            'update_item' => 'Mettre à jour le ville',
+            'add_new_item' => 'Ajouter un ville',
+            'new_item_name' => 'Nouveau ville',
+            'search_items' => 'Rechercher parmi les villes',
+            'popular_items' => 'villes les plus utilisés'
+        ],
+        'hierarchical' => true,
+        'show_in_rest' => true, // Pour Gutenberg
+    ]);
+}
+
+add_action( 'init', 'register_city' );
+
+// Ajout des types
+function register_type(){
+    register_taxonomy('type', 'housing', [
+        'label' => 'Types',
+        'labels' => [
+            'name' => 'Types',
+            'singular_name' => 'Type',
+            'all_items' => 'Tous les types',
+            'edit_item' => 'Éditer le type',
+            'view_item' => 'Voir le type',
+            'update_item' => 'Mettre à jour le type',
+            'add_new_item' => 'Ajouter un type',
+            'new_item_name' => 'Nouveau type',
+            'search_items' => 'Rechercher parmi les types',
+            'popular_items' => 'Types les plus utilisés'
+        ],
+        'hierarchical' => true,
+        'show_in_rest' => true, // Pour Gutenberg
+    ]);
+}
+
+add_action( 'init', 'register_type' );
