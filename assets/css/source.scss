@@ -13,11 +13,36 @@ License URI:  http://www.gnu.org/licenses/gpl-2.0.html
 
 $color:rgb(120, 120, 240);
 
+*
+{
+    list-style-type: none;
+}
 body{
     background-color: $color;
 }
 
 h1
 {
-    color:blue;
+    color:darkblue;
+}
+h2
+{
+    color:CornflowerBlue;
+}
+
+.card
+{
+    height: 500px;
+    transition:0.5s;
+
+    &:hover{
+        transform :scale(1.1);
+    }
+}
+
+.article-image{
+    height:500px;
+    background-position: center;
+    background-size:cover;
+    background-repeat: no-repeat;
 }

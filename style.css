@@ -7031,8 +7031,26 @@ a.text-dark:hover, a.text-dark:focus {
     color: inherit;
     border-color: #dee2e6; } }
 
+* {
+  list-style-type: none; }
+
 body {
   background-color: #7878f0; }
 
 h1 {
-  color: blue; }
+  color: darkblue; }
+
+h2 {
+  color: CornflowerBlue; }
+
+.card {
+  height: 500px;
+  transition: 0.5s; }
+  .card:hover {
+    transform: scale(1.1); }
+
+.article-image {
+  height: 500px;
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat; }
