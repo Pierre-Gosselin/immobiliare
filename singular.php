@@ -8,7 +8,7 @@ $image_url = $large_image_url[0] ?? null;
 <em class="text-center"><?php the_category(); ?></em>
 
 <div class="row">
-    <div class="offset-md-2 col-lg-8 col-md-10 col-12 article-image" style="background-image:url(<?= $image_url ?>)">
+    <div class="offset-md-2 col-lg-8 col-md-10 col-12 article-image" style="background-image:url(<?= $image_url ?>);height:400px;">
         
     </div>
 </div>

@@ -7035,22 +7035,26 @@ a.text-dark:hover, a.text-dark:focus {
   list-style-type: none; }
 
 body {
-  background-color: #7878f0; }
+  background-color: #bebed1; }
 
 h1 {
   color: darkblue; }
 
 h2 {
-  color: CornflowerBlue; }
+  color: CornflowerBlue;
+  font-size: 1.2em;
+  text-align: center; }
 
 .card {
-  height: 500px;
+  height: 550px;
   transition: 0.5s; }
   .card:hover {
-    transform: scale(1.1); }
+    transform: scale(1.05); }
+
+.card-body p {
+  margin: 0; }
 
 .article-image {
-  height: 500px;
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat; }
